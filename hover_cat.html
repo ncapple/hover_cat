@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hover cat</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+            $('img').hover(function(){   //makes the img a click event
+                $(this).attr('temp', $(this).attr('src'));      //.attr will retrieve or set an attribute of an element.. ie: this source is clicked, the src is commited to the temp.
+                $(this).attr('src', $(this).attr('alt-src'));   // it then changes the src to alt-src
+                $(this).attr('alt-src', $(this).attr('temp'));  // click again and alt-src is replaced with the temp src we just created.
+            })
+
+        });         
+                    
+</script>
+</head>
+
+<body>
+        <img src="cat.jpg" alt-src="cat1.jpg" temp=""> 
+        <img src="cat.jpg" alt-src="cat1.jpg" temp=""> 
+        <img src="cat.jpg" alt-src="cat1.jpg" temp=""> 
+        <img src="cat.jpg" alt-src="cat1.jpg" temp=""> 
+        <img src="cat.jpg" alt-src="cat1.jpg" temp="">
+        <img src="cat.jpg" alt-src="cat1.jpg" temp="">
+        <img src="cat.jpg" alt-src="cat1.jpg" temp="">
+        <img src="cat.jpg" alt-src="cat1.jpg" temp="">      
+
+</body>
+</html>
